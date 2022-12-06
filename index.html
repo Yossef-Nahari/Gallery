@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Coding Academy</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
+    type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/ca-gallery.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+  <div class="offcanvas-btn" onClick="openCanvas()">
+    <i class="fa fa-comment" aria-hidden="true"></i>
+  </div>
+  <aside class="offcanvas-aside">
+
+    <!-- Contact -->
+    <section id="contact">
+      <h4>Contact Me</h4>
+      <!--Section: Contact v.2-->
+      <section class="mb-4">
+
+        <!--Section heading-->
+        <h2 class="h1-responsive font-weight-bold text-center my-4">Contact ME 📨</h2>
+        <!--Section description-->
+        <p class="text-center w-responsive mx-auto mb-5">Please don't hesitate to contact me!</p>
+
+        <div class="row">
+
+          <!--Grid column-->
+          <div class="col-md-9 mb-md-0 mb-5">
+            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+
+              <!--Grid row-->
+              <div class="row">
+
+                <!--Grid column-->
+                <div class="col-md-12">
+                  <div class="md-form mb-0">
+                    <input type="text" id="name" name="name" class="form-control emailName"
+                      placeholder="Insert here your name">
+                    <label for="name" class="">Your name</label>
+                  </div>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-12">
+                  <div class="md-form mb-0">
+                    <input type="text" id="email" name="email" class="form-control email"
+                      placeholder="example@example.com">
+                    <label for="email" class="">Your email</label>
+                  </div>
+                </div>
+                <!--Grid column-->
+
+              </div>
+              <!--Grid row-->
+
+              <!--Grid row-->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="md-form mb-0">
+                    <input type="text" id="subject" name="subject" class="form-control subject"
+                      placeholder="Let me know what you thinking...">
+                    <label for="subject" class="">Subject</label>
+                  </div>
+                </div>
+              </div>
+              <!--Grid row-->
+
+              <!--Grid row-->
+              <div class="row">
+
+                <!--Grid column-->
+                <div class="col-md-12">
+
+                  <div class="md-form">
+                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea eMsg"
+                      placeholder="Feel free to share with me 😉"></textarea>
+                    <label for="message">Your message</label>
+                  </div>
+
+                </div>
+              </div>
+              <!--Grid row-->
+
+            </form>
+
+            <div class="text-center text-md-left">
+              <a class="btn btn-primary" onclick="onSendEmail()">Send</a>
+            </div>
+            <div class="status"></div>
+          </div>
+          <!--Grid column-->
+
+  </aside>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Meet Me</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <i class="fa fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#services">Specialities</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#me">Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container">
+      <div class="intro-text">
+        <div class="intro-lead-in">Welcome To my Portfolio</div>
+        <div class="intro-heading">It's Nice To Meet <span class="green">${You}</span></div>
+        <a class="btn btn-xl js-scroll-trigger" href="#services">Tell Me More</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading display-1">Specialities</h2>
+          <h3 class="section-subheading text-muted ">A partial description of my specializations
+          </h3>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+            <i class="fa fa-free-code-camp fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Diligent</h4>
+          <p class="text-muted">Continues to learn new topics and hot <br>updates in the newest and latest
+            technologies</p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+            <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Wide knowledge</h4>
+          <p class="text-muted">Controls a wide variety of essential and popular technologies, <br>such as JS,
+            React, NodeJS, CSS, Angular, Vue and more</p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+            <i class="fa fa-calendar fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Punctual</h4>
+          <p class="text-muted">Meets short deadlines in projects, calm even in stressful <br>situations,
+            integrates well in the environment <br>of other team members</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Grid -->
+  <section class="bg-light" id="portfolio">
+    <div class="container bg-dark bg-gradient text-white block1">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="display-2 section-heading">Portfolio</h2>
+          <h3 class=" section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+        </div>
+      </div>
+      <div id="post" class="row">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Me -->
+  <section class="bg-dark bg-gradient text-white" id="me" style="padding: 15px;">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="team-member">
+          <img class="mx-auto rounded-circle" src="img/team/me.jpg" alt="">
+          <h4>Yossef Nahari</h4>
+          <p class="text-muted">Full-stack developer</p>
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a id="linkedin" href="https://www.linkedin.com/in/yossef-nahari-23b419257/">
+                <i class="fa fa-linkedin"></i>
+              </a>
+            </li>
+            <li class=" list-inline-item">
+              <a href="https://github.com/Yossef-Nahari">
+                <i class="fa fa-github"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a id="facebook" href="https://he-il.facebook.com/yossi.nahari/">
+                <i class="fa fa-facebook"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-8 flex-align-center bg-dark bg-gradient text-white">
+        <p class="large text-muted  about-description text-left font-italic"><span
+            class="text-info h3">Hello!</span><br>
+          My name is Yossef Nahari, and I'm looking for my first challenge after my studies as a
+          Fullstack Developer.
+          I'm looking for a position as a junior fullstack or backend developer.
+          My experience includes working with technologies such as Java-script, Css, NodeJS, React, Angular,
+          AngularJS,
+          Vue and more.
+          <br>Happy to hear about relevant positions!
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 flex-align-center">
+          <a href="http://coding-academy.org" target="_blank">
+            <img src="./img/ca-logo.png" alt="">
+          </a>
+        </div>
+        <div class="col-md-4 flex-align-center">
+          <ul class="list-inline social-buttons flex-align-center">
+            <li class="list-inline-item">
+              <a id="linkedin" href="https://www.linkedin.com/in/yossef-nahari-23b419257/">
+                <i class="fa fa-linkedin"></i>
+              </a>
+            </li>
+            <li class=" list-inline-item">
+              <a href="https://github.com/Yossef-Nahari">
+                <i class="fa fa-github"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a id="facebook" href="https://he-il.facebook.com/yossi.nahari/">
+                <i class="fa fa-facebook"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4 flex-align-center">
+          <ul class="list-inline quicklinks">
+            <li class="list-inline-item">
+              <a class="js-scroll-trigger text-white bg-dark" href="#services">My specialities</a>
+            </li>
+            <li class="list-inline-item">
+              <a class="js-scroll-trigger text-white bg-dark" href="#portfolio">My projects</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Portfolio Modal -->
+  <div class="portfolio-modal modal fade" id="portfolioModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container" id="modal-area">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <!-- Project Details Go Here -->
+                <h2 class="modal-name"></h2>
+                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                <img class="img-fluid d-block mx-auto img-modal" src="" alt="">
+                <p class="p-modal"></p>
+                <ul class="list-inline">
+                  <li class="date-modal"></li>
+                  <a class="btn btn-primary btnModal" target="_blank" rel="noopener"
+                    href="https://yossef-nahari.github.io/Books-Shop/">Click
+                    Here!</a>
+                  <li class="url">Open
+                    Project</li></a>
+                  <li class="labels"></li </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Close Project</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/popper/popper.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/ca-gallery.js"></script>
+  <script src="js/offCanvas.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- services scripts -->
+  <script src="js/proj-service.js"></script>
+  <script src="js/storage-service.js"></script>
+
+</body>
+
+</html>
